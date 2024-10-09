@@ -3,7 +3,7 @@
 </div>
 
 <div class="p-4">
-  <%= form_with url: root_path, method: :get, local: false, id: 'city-search-form', remote: true do %>
+  <%= form_with url: cities_search_path, method: :get, local: false, id: 'city-search-form', remote: true do %>
     <div class="form-group my-4">
       <%= select_tag :state, options_from_collection_for_select(State.all, :name, :name), id: 'state-select', class: 'form-select', onchange: 'handleStateChange()' %>
     </div>
