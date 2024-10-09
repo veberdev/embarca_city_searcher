@@ -1,2 +1,24 @@
-<h1>Cities#search</h1>
-<p>Find me in app/views/cities/search.html.erb</p>
+<h1>Buscar Cidades</h1>
+<%= form_with url: root_path, method: :get, local: false, id: 'city-search-form', remote: true do %>
+  <div>
+    <label>Estado:</label>
+    <%= select_tag :state, options_from_collection_for_select(State.all, :name, :name, { prompt: 'Selecione um estado' }), id: 'state-select' %>
+  </div>
+  <div>
+    <label>Nome da Cidade:</label>
+    <%= text_field_tag :name, nil, id: 'city-name' %>
+  </div>
+<% end %>
+<div id="city-results">
+  <%= render partial: "city_results" %>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const cityNameInput = document.getElementById('city-name');
+  const form = document.getElementById('city-search-form');
+  cityNameInput.addEventListener('input', function() {
+      form.requestSubmit();
+  });
+  });
+</script>

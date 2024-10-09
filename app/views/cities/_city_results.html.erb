@@ -1,0 +1,10 @@
+<h2>Resultados</h2>
+<% if @cities.present? %>
+  <ul>
+    <% @cities.each do |city| %>
+      <li><%= city.name %> - <%= city.state.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Nenhum resultado encontrado.</p>
+<% end %>
