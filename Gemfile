@@ -21,6 +21,7 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'pry'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
@@ -28,10 +29,10 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'chromedriver-helper'
   gem 'factory_bot', '~> 5.2'
   gem 'faker'
   gem 'pry-rails'
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
   gem 'rubocop', '~> 1.65.0', require: false
   gem 'selenium-webdriver', '~> 4.0', '>= 4.0.3'
