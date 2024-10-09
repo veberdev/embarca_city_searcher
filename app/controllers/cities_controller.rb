@@ -13,8 +13,8 @@ class CitiesController < ApplicationController
   private
 
   def fetch_cities
-    state = State.find_by(name: params[:state])
-    if params[:name].present?
+    if params[:state]
+      state = State.find_by(name: params[:state])
       City.where('state_id = ? AND name ILIKE ?', state.id, "%#{params[:name]}%")
     else
       City.where(state_id: State.first.id)
