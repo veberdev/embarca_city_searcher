@@ -1,10 +1,16 @@
-<h2>Resultados</h2>
+<h2 class="mt-4">Resultados</h2>
 <% if @cities.present? %>
-  <ul>
-    <% @cities.each do |city| %>
-      <li><%= city.name %> - <%= city.state.name %></li>
-    <% end %>
-  </ul>
+  <table class="table text-center">
+    <thead>
+    </thead>
+    <tbody>
+      <% @cities.each do |city| %>
+        <tr>
+          <td><%= city.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% else %>
   <p>Nenhum resultado encontrado.</p>
 <% end %>
