@@ -1,3 +1,14 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+document.addEventListener "DOMContentLoaded", ->
+  cityNameInput = document.getElementById('city-name')
+  form = document.getElementById('city-search-form')
+
+  cityNameInput.addEventListener 'input', ->
+    form.requestSubmit()
+
+  handleStateChange = ->
+    cityNameInput.value = '' 
+    form.requestSubmit() 
+
+  stateSelect = document.getElementById('state-select')
+  stateSelect.addEventListener 'change', handleStateChange
+  

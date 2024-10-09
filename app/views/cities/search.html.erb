@@ -12,13 +12,3 @@
 <div id="city-results">
   <%= render partial: "city_results" %>
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-  const cityNameInput = document.getElementById('city-name');
-  const form = document.getElementById('city-search-form');
-  cityNameInput.addEventListener('input', function() {
-      form.requestSubmit();
-  });
-  });
-</script>
