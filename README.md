@@ -34,6 +34,9 @@ The goal is to develop a fullstack application, which can search cities stored i
 #### Desk checking:
 * The gem 'pry' was used in the project for this purpose.
 
+#### Environment Variables:
+* You can use your own database credentials by renaming the file `.env_copy` to `.env` and providing your credentials. Otherwise, the default environment variables will be used.
+
 #### Using the application:
 * Go to http://localhost:3000 (or http://localhost:3000/cities/search)
 * You can change the State/Estado and type something in order to query the cities/Cidades
