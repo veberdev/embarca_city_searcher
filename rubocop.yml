@@ -1,10 +1,11 @@
 AllCops:
   Exclude:
     - 'config/**/*'
-    - '**/bin/**/*'
+    - '**/bin/**/*'       # This should cover all files in the bin directory
     - 'app/mailers/**/*'
     - 'test/**/*'
     - 'db/schema.rb'
+    - 'bin/bundle'        # Ensure this line is present as well
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/Documentation:
@@ -13,4 +14,3 @@ Style/ClassAndModuleChildren:
   Enabled: false
 Metrics/BlockLength:
   Max: 100
-  
