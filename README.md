@@ -17,7 +17,7 @@ The goal is to develop a fullstack application, which can search cities stored i
 #### Installation/Start
 * On the project's root, execute:
 
-  `sudo docker-compose up --build`
+  `sudo docker compose up --build`
 
 * Go to http://localhost:3000/ to access the application.
 
