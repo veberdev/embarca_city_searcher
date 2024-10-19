@@ -23,6 +23,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_HOST: db
+          POSTGRES_HOST_AUTH_METHOD: trust
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://postgres:postgres@localhost:5432/embarca_city_searcher_test"
@@ -57,10 +58,11 @@ jobs:
       # run: bundle exec bundler-audit --update
       # - name: Security audit application code
       #  run: bundle exec brakeman -q -w2
-      - name: Run database migrations
-        run: bundle exec rake db:migrate RAILS_ENV=test
+      - name: Set up database
+        run: |
+          bundle exec rake db:create
+          bundle exec rake db:migrate
       - name: Lint Ruby files
         run: bundle exec rubocop --parallel
       - name: Tests with RSpec
         run: bundle exec rspec
-
