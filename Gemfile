@@ -26,6 +26,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+  # used to detect query n + 1
+  gem 'bullet'
 end
 
 group :test do
