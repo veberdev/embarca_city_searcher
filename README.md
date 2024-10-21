@@ -3,6 +3,11 @@ This is a application for a technical test.
 
 The goal is to develop a fullstack application, which can search cities stored in the database.
 
+## Techical resources
+
+1. CI/CD with github actions
+2. Upload docker image to DockerHub
+
 ## Techical requirements
 
 1. ruby version 2.7.0 and Rails version 5.x
@@ -10,7 +15,7 @@ The goal is to develop a fullstack application, which can search cities stored i
 3. use PostgreSQL
 4. use Rubocop
 5. use Rspec
-6. Routing and controllers automated tests
+6. Routing and controllers automated tests 
 
 ## Usage instructions
 
