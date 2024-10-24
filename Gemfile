@@ -21,13 +21,13 @@ group :development, :test do
 end
 
 group :development do
+  gem 'bullet' # detect query n + 1
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry'
+  gem 'simplecov', require: false # code coverage analysis
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
-  # used to detect query n + 1
-  gem 'bullet'
 end
 
 group :test do
